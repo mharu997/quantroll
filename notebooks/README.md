@@ -1,6 +1,8 @@
 # quantroll — use-case notebooks
 
-Five end-to-end, executed walkthroughs on **real daily ticker data** (56 US ETFs and large-cap stocks, 2012 → today, cached in `data/` and re-downloadable via `yfinance`). Each notebook demonstrates a failure of the naive workflow, the stable alternative, how to read every output, and what the result is worth in a real process.
+Five end-to-end, executed walkthroughs on **real daily ticker data** (56 US ETFs and large-cap stocks, 2012 → today, cached in `data/` and re-downloadable via `yfinance`).
+
+One idea connects them. Market structure is real but does not stay put, so practitioners re-estimate everything on rolling windows — and the classical tools, designed to be fit *once*, make arbitrary choices (signs, orderings, labels, orientations) differently at every refit. The outputs look like time series but are stacks of unrelated snapshots. Each notebook takes one desk question, shows that failure on real data, repairs it by making the arbitrary choices *consistent through time*, and then collects what continuity buys: monitors, screens, and conditioning variables that can be watched, alerted on, and audited. Notebooks 01–04 apply this to estimation; notebook 05 applies the same discipline — make the arbitrary explicit and hold it fixed — to the decision layer. Read in order for the argument, or standalone for the tool.
 
 | # | Notebook | Question it answers | Tool | Headline result on this data |
 |---|---|---|---|---|
